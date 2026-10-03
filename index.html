@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>THE BRO ARCHIVE — DZULHI</title>
+  <link rel="stylesheet" href="style.css" onerror="alert('GAGAL LOAD: style.css — cek nama file & lokasinya!')">
+</head>
+<body>
+
+  <canvas id="starfield-canvas"></canvas>
+
+  <audio id="bg-audio" loop></audio>
+
+  <div class="boot-screen">
+    <div class="boot-title">THE BRO ARCHIVE</div>
+
+    <div class="boot-status" id="boot-status">INITIALIZING...</div>
+
+    <div class="boot-progress-track">
+      <div class="boot-progress-fill" id="boot-progress-fill"></div>
+    </div>
+
+    <div class="boot-identity" id="boot-identity">
+      <div id="boot-name"></div>
+      <div id="boot-birthday"></div>
+      <div class="archive-id" id="boot-archiveid"></div>
+    </div>
+
+    <button class="enter-btn" id="enter-btn">ENTER ARCHIVE</button>
+  </div>
+
+  <div class="dashboard" id="dashboard">
+    <div class="dashboard-header">
+      <div class="dashboard-title" id="dashboard-title"></div>
+      <div class="dashboard-subtitle" id="dashboard-subtitle"></div>
+    </div>
+    <nav class="menu-list" id="menu-list"></nav>
+  </div>
+
+  <div class="section-view" id="section-view">
+    <button class="back-btn" id="back-btn">← BACK TO DASHBOARD</button>
+    <div class="section-title" id="section-title"></div>
+    <div class="section-content" id="section-content"></div>
+  </div>
+
+  <!-- Cuma 3 file total: index.html, style.css, script.js -->
+  <!-- Firebase SDK (compat) untuk fitur Leave a Message -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBlly_gtzzoLdaAkV0jc8oIpK_m9zCYWsw",
+      authDomain: "bro-archive-web.firebaseapp.com",
+      projectId: "bro-archive-web",
+      storageBucket: "bro-archive-web.firebasestorage.app",
+      messagingSenderId: "205342320218",
+      appId: "1:205342320218:web:f337bcaef39c42cd9d1a63"
+    };
+    firebase.initializeApp(firebaseConfig);
+    window.db = firebase.firestore();
+  </script>
+
+  <script src="script.js" onerror="alert('GAGAL LOAD: script.js — cek nama file & lokasinya!')"></script>
+
+</body>
+</html>
